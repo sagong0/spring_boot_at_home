@@ -1,0 +1,23 @@
+/* Stereo Type Annotations */
+@Component : 어느 클래스에나 사용가능한 제너릭 어노테이션
+@Service : 비지니스 로직 있을때 주로 사용.
+@Controller : ex) web controller 같은 클래스
+@Repository : db와 통신 ,또는 저장 검색 하는 경우
+
+/**
+- Annotations Review
+@Configuration : 클래스가 @Bean 메서드 하나 이상 선언함을 나타냄.
+@Primary : 우선순위 정해줌.
+@Qualifier : 구체적
+@Scope(value =  ConfigurableBeanFactory.SCOPE_PROTOTYPE)  : 빈 생성시마다 새로운 인스턴스 만들어짐
+
+@PostConstruct : 의존성 주입 수행 이후 실행될 메서드
+                   >>(의존성이 준비되는 대로 데이터베이스에서 몇 가지 값을 가져오고자 할 때 이거 사용하면됨)
+
+@PreDestroy : 인스턴스를 삭제하는 과정을 거치고 있음을 알려줌.  (보톡 특정 Bean에서 보유하고 있는 resource 해제 할 때 사용.)
+                >>ioc Container 에서 Bean이 삭제되기 전에 @PreDestroy 어노테이션이 붙흔 메소드 호출
+
+----- CDI (contexts & dependency injection) -----
+@Named : Similar to Component
+@Inject : Similar to Autowired
+*/

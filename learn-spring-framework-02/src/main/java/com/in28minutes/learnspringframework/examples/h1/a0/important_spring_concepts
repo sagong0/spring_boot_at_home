@@ -1,0 +1,3 @@
+ * container
+ - Bean Factory : 기본 Spring Ioc 컨테이너
+ - Application Context : 자주사용되고, 거의 항상 사용되는 어플리케이션 컨텍스트.
